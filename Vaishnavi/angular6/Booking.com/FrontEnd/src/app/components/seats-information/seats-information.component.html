@@ -1,0 +1,218 @@
+
+
+    <!-- Contents -->
+    <div class="container-fluid seats-container">
+      <div class="row">
+          <div class="col-md-10 offset-md-1">
+              <div class="card shadow-sm">
+                  <div class="card-header">
+                          <div class="heading pull-left">
+                                  <label>Date Of Event</label>
+                                <input type="date"   (change)="OnDateSelect($event.target.value)"	min="{{date | date:'yyyy-MM-dd'}}"   [(ngModel)]="eventDate" required/>
+                                
+                            </div>
+                      <!-- <span class="heading pull-right">Select your seats</span> -->
+                      <span class="float-right"  >
+                              <label class="heading">Select your seats</label>
+                          <select class="custom-select" id="" (change)="refreshSelected($event.target.value)" (click)="setTotaltickets(requiredTickets )" [(ngModel)]="requiredTickets">
+                                  <option value="1">Single Person</option>
+                                  <option value="2">Two People</option>
+                                  <option value="3">Three People</option>
+                                  <option value="5">Five People</option>
+                                  
+                                  </select>
+                      </span>
+                  </div>
+                  <div class="card-body">
+                      <!-- Seats container -->
+                      <div class="d-flex flex-row mb-3 seats">
+                          <div class="mr-2 seat-row">A</div>
+                          <div id="A1" (click)="selectThisSeat('A1');toggleClass('A1')"class=" seat">1</div>
+                          <div id="A2" (click)="selectThisSeat('A2');toggleClass('A2')"class=" seat">2</div>
+                          <div id="A3" (click)="selectThisSeat('A3');toggleClass('A3')"class=" seat">3</div>
+                          <div id="A4" (click)="selectThisSeat('A4');toggleClass('A4')"class=" seat">4</div>
+                          <div id="A5" (click)="selectThisSeat('A5');toggleClass('A5')"class=" seat">5</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="A6" (click)="selectThisSeat('A6');toggleClass('A6')"class=" seat">6</div>
+                          <div id="A7" (click)="selectThisSeat('A7');toggleClass('A7')"class=" seat">7</div>
+                          <div id="A8" (click)="selectThisSeat('A8');toggleClass('A8')"class=" seat">8</div>
+                          <div id="A9" (click)="selectThisSeat('A9');toggleClass('A9')"class=" seat">9</div>
+                          <div id="A10" (click)="selectThisSeat('A10');toggleClass('A10')"class=" seat">10</div>
+                          <div id="A11" (click)="selectThisSeat('A11');toggleClass('A11')"class=" seat">11</div>
+                          <div id="A12" (click)="selectThisSeat('A12');toggleClass('A12')"class=" seat">12</div>
+                          <div id="A13" (click)="selectThisSeat('A13');toggleClass('A13')"class=" seat">13</div>
+                          <div id="A14" (click)="selectThisSeat('A14');toggleClass('A14')"class=" seat">14</div>
+                          <div id="A15" (click)="selectThisSeat('A15');toggleClass('A15')"class=" seat">15</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="A16" (click)="selectThisSeat('A16');toggleClass('A16')"class=" seat">16</div>
+                          <div id="A17" (click)="selectThisSeat('A17');toggleClass('A17')"class=" seat">17</div>
+                          <div id="A18" (click)="selectThisSeat('A18');toggleClass('A18')"class=" seat">18</div>
+                          <div id="A19" (click)="selectThisSeat('A19');toggleClass('A19')"class=" seat">19</div>
+                          <div id="A20" (click)="selectThisSeat('A20');toggleClass('A20')"class=" seat">20</div>
+                          <div id="A21" (click)="selectThisSeat('A21');toggleClass('A21')"class=" seat">21</div>
+                          <div id="A22" (click)="selectThisSeat('A22');toggleClass('A22')"class=" seat">22</div>
+                          <div id="A23" (click)="selectThisSeat('A23');toggleClass('A23')"class=" seat">23</div>
+                          <div id="A24" (click)="selectThisSeat('A24');toggleClass('A24')"class=" seat">24</div>
+                          <div id="A25" (click)="selectThisSeat('A25');toggleClass('A25')"class=" seat">25</div>
+                      </div>
+
+                      <div class="d-flex flex-row mb-3 seats">
+                          <div class="mr-2 seat-row">B</div>
+                          <div id="B1" (click)="selectThisSeat('B1');toggleClass('B1')"class=" seat">1</div>
+                          <div id="B2" (click)="selectThisSeat('B2');toggleClass('B2')"class=" seat">2</div>
+                          <div id="B3" (click)="selectThisSeat('B3');toggleClass('B3')"class=" seat">3</div>
+                          <div id="B4" (click)="selectThisSeat('B4');toggleClass('B4')"class=" seat">4</div>
+                          <div id="B5" (click)="selectThisSeat('B5');toggleClass('B5')"class=" seat">5</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="B6" (click)="selectThisSeat('B6');toggleClass('B6')"class=" seat">6</div>
+                          <div id="B7" (click)="selectThisSeat('B7');toggleClass('B7')"class=" seat">7</div>
+                          <div id="B8" (click)="selectThisSeat('B8');toggleClass('B8')"class=" seat">8</div>
+                          <div id="B9" (click)="selectThisSeat('B9');toggleClass('B9')"class=" seat">9</div>
+                          <div id="B10" (click)="selectThisSeat('B10');toggleClass('B10')"class=" seat">10</div>
+                          <div id="B11" (click)="selectThisSeat('B11');toggleClass('B11')"class=" seat">11</div>
+                          <div id="B12" (click)="selectThisSeat('B12');toggleClass('B12')"class=" seat">12</div>
+                          <div id="B13" (click)="selectThisSeat('B13');toggleClass('B13')"class=" seat">13</div>
+                          <div id="B14" (click)="selectThisSeat('B14');toggleClass('B14')"class=" seat">14</div>
+                          <div id="B15" (click)="selectThisSeat('B15');toggleClass('B15')"class=" seat">15</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="B16" (click)="selectThisSeat('B16');toggleClass('B16')"class=" seat">16</div>
+                          <div id="B17" (click)="selectThisSeat('B17');toggleClass('B17')"class=" seat">17</div>
+                          <div id="B18" (click)="selectThisSeat('B18');toggleClass('B18')"class=" seat">18</div>
+                          <div id="B19" (click)="selectThisSeat('B19');toggleClass('B19')"class=" seat">19</div>
+                          <div id="B20" (click)="selectThisSeat('B20');toggleClass('B20')"class=" seat">20</div>
+                          <div id="B21" (click)="selectThisSeat('B21');toggleClass('B21')"class=" seat">21</div>
+                          <div id="B22" (click)="selectThisSeat('B22');toggleClass('B22')"class=" seat">22</div>
+                          <div id="B23" (click)="selectThisSeat('B23');toggleClass('B23')"class=" seat">23</div>
+                          <div id="B24" (click)="selectThisSeat('B24');toggleClass('B24')"class=" seat">24</div>
+                          <div id="B25" (click)="selectThisSeat('B25');toggleClass('B25')"class=" seat">25</div>
+                      </div>
+
+                      <div class="d-flex flex-row mb-3 seats">
+                          <div class="mr-2 seat-row">C</div>
+                          <div id="C1" (click)="selectThisSeat('C1');toggleClass('C1')"class=" seat">1</div>
+                          <div id="C2" (click)="selectThisSeat('C2');toggleClass('C2')"class=" seat">2</div>
+                          <div id="C3" (click)="selectThisSeat('C3');toggleClass('C3')"class=" seat">3</div>
+                          <div id="C4" (click)="selectThisSeat('C4');toggleClass('C4')"class=" seat">4</div>
+                          <div id="C5" (click)="selectThisSeat('C5');toggleClass('C5')"class=" seat">5</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="C6" (click)="selectThisSeat('C6');toggleClass('C6')"class=" seat">6</div>
+                          <div id="C7" (click)="selectThisSeat('C7');toggleClass('C7')"class=" seat">7</div>
+                          <div id="C8" (click)="selectThisSeat('C8');toggleClass('C8')"class=" seat">8</div>
+                          <div id="C9" (click)="selectThisSeat('C9');toggleClass('C9')"class=" seat ">9</div>
+                          <div id="C10" (click)="selectThisSeat('C10');toggleClass('C10')"class=" seat ">10</div>
+                          <div id="C11" (click)="selectThisSeat('C11');toggleClass('C11')"class=" seat ">11</div>
+                          <div id="C12" (click)="selectThisSeat('C12');toggleClass('C12')"class=" seat ">12</div>
+                          <div id="C13" (click)="selectThisSeat('C13');toggleClass('C13')"class=" seat ">13</div>
+                          <div id="C14" (click)="selectThisSeat('C14');toggleClass('C14')"class=" seat">14</div>
+                          <div id="C15" (click)="selectThisSeat('C15');toggleClass('C15')"class=" seat">15</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="C16" (click)="selectThisSeat('C16');toggleClass('C16')"class=" seat">16</div>
+                          <div id="C17" (click)="selectThisSeat('C17');toggleClass('C17')"class=" seat">17</div>
+                          <div id="C18" (click)="selectThisSeat('C18');toggleClass('C18')"class=" seat">18</div>
+                          <div id="C19" (click)="selectThisSeat('C19');toggleClass('C19')"class=" seat">19</div>
+                          <div id="C20" (click)="selectThisSeat('C20');toggleClass('C20')"class=" seat">20</div>
+                          <div id="C21" (click)="selectThisSeat('C21');toggleClass('C21')"class=" seat">21</div>
+                          <div id="C22" (click)="selectThisSeat('C22');toggleClass('C22')"class=" seat">22</div>
+                          <div id="C23" (click)="selectThisSeat('C23');toggleClass('C23')"class=" seat">23</div>
+                          <div id="C24" (click)="selectThisSeat('C24');toggleClass('C24')"class=" seat">24</div>
+                          <div id="C25" (click)="selectThisSeat('C25');toggleClass('C25')"class=" seat">25</div>
+                      </div>
+
+                      <div class="d-flex flex-row mb-3 seats">
+                          <div class="mr-2 seat-row">D</div>
+                          <div id="D1" (click)="selectThisSeat('D1');toggleClass('D1')"class=" seat">1</div>
+                          <div id="D2" (click)="selectThisSeat('D2');toggleClass('D2')"class=" seat">2</div>
+                          <div id="D3" (click)="selectThisSeat('D3');toggleClass('D3')"class=" seat">3</div>
+                          <div id="D4" (click)="selectThisSeat('D4');toggleClass('D4')"class=" seat">4</div>
+                          <div id="D5" (click)="selectThisSeat('D5');toggleClass('D5')"class=" seat">5</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="D6" (click)="selectThisSeat('D6');toggleClass('D6')"class=" seat">6</div>
+                          <div id="D7" (click)="selectThisSeat('D7');toggleClass('D7')"class=" seat">7</div>
+                          <div id="D8" (click)="selectThisSeat('D8');toggleClass('D8')"class=" seat">8</div>
+                          <div id="D9" (click)="selectThisSeat('D9');toggleClass('D9')"class=" seat">9</div>
+                          <div id="D10" (click)="selectThisSeat('D10');toggleClass('D10')"class=" seat">10</div>
+                          <div id="D11" (click)="selectThisSeat('D11');toggleClass('D11')"class=" seat">11</div>
+                          <div id="D12" (click)="selectThisSeat('D12');toggleClass('D12')"class=" seat">12</div>
+                          <div id="D13" (click)="selectThisSeat('D13');toggleClass('D13')"class=" seat">13</div>
+                          <div id="D14" (click)="selectThisSeat('D14');toggleClass('D14')"class=" seat">14</div>
+                          <div id="D15" (click)="selectThisSeat('D15');toggleClass('D15')"class=" seat">15</div>
+                          <div class="mr-4  seat-divider"> </div>
+                          <div id="D16" (click)="selectThisSeat('D16');toggleClass('D16')"class=" seat">16</div>
+                          <div id="D17" (click)="selectThisSeat('D17');toggleClass('D17')"class=" seat">17</div>
+                          <div id="D18" (click)="selectThisSeat('D18');toggleClass('D18')"class=" seat">18</div>
+                          <div id="D19" (click)="selectThisSeat('D19');toggleClass('D19')"class=" seat">19</div>
+                          <div id="D21" (click)="selectThisSeat('D20');toggleClass('D20')"class=" seat">20</div>
+                          <div id="D21" (click)="selectThisSeat('D21');toggleClass('D21')"class=" seat">21</div>
+                          <div id="D22" (click)="selectThisSeat('D22');toggleClass('D22')"class=" seat">22</div>
+                          <div id="D23" (click)="selectThisSeat('D23');toggleClass('D23')"class=" seat">23</div>
+                          <div id="D24" (click)="selectThisSeat('D24');toggleClass('D24')"class=" seat">24</div>
+                          <div id="D25" (click)="selectThisSeat('D25');toggleClass('D25')"class=" seat">25</div>
+                      </div>
+                      <!-- Seats container ends here-->
+
+                      <!-- Confirmation Box - Show this box after Selecting valid no of seats only -->
+                      <div ng-show="selectedSeats.length == requiredTickets">
+                      <div class="text-center my-5">
+                          <img src="assets/images/screen.png"> <br/>
+                          <span class="text-muted small">All eyes this way please!</span>
+                      </div>
+                      <div class="row m-2">
+                          <div class="col-md-12 p-0">
+                              <div class="alert alert-danger" role="alert">
+                                  <i class="fa fa-exclamation-triangle"></i>  <h1>{{userInfoForm.form.invalid}}</h1>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row payment-holder m-2">
+                          <div class="col-md-4 p-3">
+                              <form #userInfoForm="ngForm" novalidate>
+                                  <div class="form-group">
+                                      <label>Name</label>
+                                      <input type="text" name="name" [(ngModel)]="name" class="form-control" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label>Email</label>
+                                      <input type="email" name="email" [(ngModel)]="email" class="form-control" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label>Contact</label>
+                                      <input type="tel" name="phone" minlength="10" maxlength="10" pattern="\d{10}" [(ngModel)]="phone" class="form-control" required>
+                                  </div>
+                              </form>
+                          </div>
+                          <div class="col-md-8 p-3">
+                              <div class="mt-5">
+                                  <h5 class="text-center">Your Seats Selection:
+                                          <span class="badge badge-secondary mr-2" ng-repeat="seat in selectedSeats">{{seat}}</span>
+
+                                      <!-- <span class="badge badge-secondary mr-2">A-10</span>
+                                      <span class="badge badge-secondary mr-2">B-20</span>
+                                      <span class="badge badge-secondary mr-2">A-10</span>
+                                      <span class="badge badge-secondary mr-2">B-20</span>
+                                      <span class="badge badge-secondary mr-2">B-20</span> -->
+                                  </h5>
+                                 
+                                  <div class="row mt-3"  >
+                                      <div class="col-sm-6 offset-sm-3 text-center">
+                                          <button type="button" (click)="sendUserInfo()" [disabled]="userInfoForm.form.invalid"  class="btn btn-primary btn-lg btn-block">Pay <i class="fa fa-rupee-sign"></i> {{totalCost}}</button>
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                      </div>
+                  </div>
+
+                      <!-- Confirmation box ends here-->
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+  </div>
+  <!-- Contents ends-->
+
